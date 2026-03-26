@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Image, Share2 } from "lucide-react";
+import { Send, Image } from "lucide-react";
 
 type ChatInputProps = {
   onSend: (message: string) => void;
@@ -21,13 +21,6 @@ const ChatInput = ({ onSend, isLoading, imageMode, onToggleImageMode }: ChatInpu
   return (
     <form onSubmit={handleSubmit} className="p-4 border-t border-border">
       <div className="flex items-center gap-2">
-        <button
-          type="button"
-          className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary text-muted-foreground hover:text-foreground transition-colors"
-          title="Share"
-        >
-          <Share2 className="w-5 h-5" />
-        </button>
         <button
           type="button"
           onClick={onToggleImageMode}

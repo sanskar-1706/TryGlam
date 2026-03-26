@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ChatHeader from "@/components/ChatHeader";
 import ChatMessage, { type Message } from "@/components/ChatMessage";
 import ChatInput from "@/components/ChatInput";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import { streamChat, generateImage } from "@/lib/ai";
-import { Loader2 } from "lucide-react";
+import { Loader2, Sparkles, Shirt } from "lucide-react";
 
 const Index = () => {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -90,6 +91,18 @@ const Index = () => {
         imageMode={imageMode}
         onToggleImageMode={() => setImageMode(!imageMode)}
       />
+      {/* Prominent Try On button at bottom */}
+      <div className="px-4 pb-4">
+        <Link to="/virtual-tryon" className="block">
+          <button className="w-full py-4 rounded-full border-2 border-primary bg-background hover:bg-primary/10 transition-colors flex items-center justify-center gap-2 text-foreground font-semibold text-base">
+            <Sparkles className="w-5 h-5 text-primary" />
+            <span>✨ TRY THIS OUTFIT ON</span>
+          </button>
+        </Link>
+        <p className="text-center text-xs text-muted-foreground mt-2">
+          Powered by FitGlam AI sizing & visualization engine
+        </p>
+      </div>
     </div>
   );
 };
