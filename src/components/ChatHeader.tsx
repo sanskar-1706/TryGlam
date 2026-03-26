@@ -1,4 +1,6 @@
-import { Sparkles } from "lucide-react";
+import { Sparkles, Shirt } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const ChatHeader = () => {
   return (
@@ -14,6 +16,12 @@ const ChatHeader = () => {
           </span>
         </div>
       </div>
+      <Link to="/virtual-tryon">
+        <Button variant="outline" size="sm" className="gap-1.5 border-primary/30 text-primary hover:bg-primary/10">
+          <Shirt className="w-4 h-4" />
+          Try On
+        </Button>
+      </Link>
     </header>
   );
 };
