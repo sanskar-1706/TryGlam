@@ -95,7 +95,7 @@ const Index = () => {
       <div className="px-4 pb-4">
         <Link to="/virtual-tryon" className="block">
           <button className="w-full py-4 rounded-full border-2 border-primary bg-background hover:bg-primary/10 transition-colors flex items-center justify-center gap-2 text-foreground font-semibold text-base">
-            <Sparkles className="w-5 h-5 text-primary" />
+            
             <span>✨ TRY THIS OUTFIT ON</span>
           </button>
         </Link>
