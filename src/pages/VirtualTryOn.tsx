@@ -3,6 +3,7 @@ import { Upload, Image as ImageIcon, Sparkles, ArrowLeft, X, Clipboard, Loader2 
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import fitglamLogo from "@/assets/fitglam-logo.png";
 
 const TRYON_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/virtual-tryon`;
 
