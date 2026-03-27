@@ -3,6 +3,7 @@ import { Upload, Image as ImageIcon, Sparkles, ArrowLeft, X, Clipboard, Loader2 
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import fitglamLogo from "@/assets/fitglam-logo.png";
 
 const TRYON_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/virtual-tryon`;
 
@@ -193,9 +194,7 @@ const VirtualTryOn = () => {
           <Link to="/" className="p-1.5 rounded-lg hover:bg-secondary transition-colors">
             <ArrowLeft className="w-5 h-5 text-muted-foreground" />
           </Link>
-          <div className="w-9 h-9 rounded-lg gold-gradient flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-primary-foreground" />
-          </div>
+          <img src={fitglamLogo} alt="FitGlam logo" className="h-9 w-auto" />
           <div>
             <h1 className="text-lg font-bold text-foreground">Virtual Try-On</h1>
             <p className="text-xs text-muted-foreground">AI-powered outfit fitting</p>
